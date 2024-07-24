@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+<head>
+  <title>IC :: CF</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Get to Know the community.">
+  <link rel="icon" href="media/lficon.ico">
+  <link rel="stylesheet" type="text/css" href="cryp.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+
+  <script src="cryp.js"></script>
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+
+  <script>
+    function captureFormData(f) 
+    {
+      var data = "", i, len;
+
+      len = f.length;
+
+      for (i = 0; i < len; i++)  
+      {
+        data = data + f.elements[i].value;
+
+        if (i < len-1) 
+        { 
+          data += ", ";
+        }
+      }
+      alert (data);
+    }
+
+  </script>
+
+</head>
+  
+<body> 
+  <header>
+    <h1>Investing in cryptocurrency</h1>
+  </header>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html"  title="Go Home">Home</a></li>
+      <li><a href="cryptobasics.html" title=" Go to cryptobasics">Crypto Basics</a></li>
+      <li><a href="investmentstrategies.html" title="Go to investmentstrategies">Investment Strategies</a></li>
+      <li><a href="advancetopics.html" title="Go to advancetopics">Advanced Topics</a></li>
+      <li><a href="communityforum.html" class="menu-chosen" title="Go to communityforum">Community Forum</a></li>
+      <li><a href="successtories.html" title="Go to successtories">Success Stories</a></li>
+    </ul>
+    </ul>
+  </nav>
+
+  <div id="cmfocrp"></div>
+  
+  <main>
+   <h5>Join Our Crypto Community waitlist</h5>
+
+   <div style="text-align:center ;">
+   <p>Required information is marked with an asterisk (*).</p>
+   <form id="frm"></form>
+    <div class="grid-container">
+      <div class="leftJustify">
+       <label for="myFName"> First Name: </label>
+      </div>
+      <div class="leftJustify">
+      <input type="text" id="myFName" name="myFName" >
+       </div>
+
+     <div class="leftJustify">
+       <label for="myLName"> Last Name: </label>
+     </div>
+
+     <div class="leftJustify">
+       <input type="text" id="myLName" name="myLName" >
+      </div>
+
+     <div class="leftJustify">
+       <label for="myEmail">* E-mail: </label>
+      </div>
+
+     <div class="leftJustify">
+       <input type="email" id="myEmail" name="myEmail" required>
+      </div>
+    
+      <div class="leftJustify">
+       <label for="myAge">Age: </label>
+      </div>
+
+      <div class="leftJustify">
+       <input type="number" id="myAge" name="myGroup" min="0" max="100">
+      </div>
+
+      <div class="leftJustify">
+       <label for="myComments"> Comments: </label>
+      </div>
+
+      <div class="leftJustify">
+       <textarea id="myComments" name="myComments" rows="3" cols="50" ></textarea>
+      </div>
+
+      <div class="leftJustify">
+       &nbsp;
+      </div>
+
+      <div class="leftJustify">
+       <input type="submit" id="mySubmit" value="Submit">
+      </div>
+
+    </div>
+    </form>
+    </div>
+
+
+    <script>
+      $("#frm").validate();
+
+      $(function () {
+        $('#frm').submit(function () {
+            if($(this).valid()) {
+               captureFormData(this);
+            }
+        });  
+      }); 
+      
+    </script>
+
+  </main>
+
+  <footer>
+    <p id="addy">
+      Investing<br>
+      In<br>
+      Crypto
+    </p>
+
+    <p id="copy">
+      &copy; Investing in Cryptocurrency<br>
+      <a href="eread2@hawckmail.hccfl.edu" title="Send e-mail to eread2@hawckmail.hccfl.edu">eread2@hawckmail.hccfl.edu</a><br>
+      
+      <span id="mobile"><a href="tel:813-410-9240">
+        <i class="fa fa-phone"></i> 813-410-9240</a></span>
+      <span id="desktop">813-410-9240</span>
+    </p>
+  </footer>
+</body>
+</html>
